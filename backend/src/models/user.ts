@@ -1,8 +1,8 @@
-import { Model, DataTypes, ForeignKey, CreationOptional, Association } from 'sequelize';
+import { Model, DataTypes, ForeignKey, CreationOptional, Association, InferAttributes } from 'sequelize';
 import sequelize from './';
 import Address from './address';
 
-class User extends Model {
+class User extends Model<InferAttributes<User>> {
   declare id: number;
   declare email: string;
   declare password: string;
@@ -23,7 +23,7 @@ User.init({
   email: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true,
+    unique: true
   },
   password: {
     type: DataTypes.STRING,
@@ -31,14 +31,22 @@ User.init({
   },
   addressId: {
     type: DataTypes.INTEGER,
-    allowNull: false
+    allowNull: false,
   },
-  createdAt: DataTypes.DATE,
-  updatedAt: DataTypes.DATE
+  createdAt: {
+    allowNull: false,
+    type: DataTypes.DATE,
+  },
+  updatedAt: {
+    allowNull: false,
+    type: DataTypes.DATE,
+  }
 }, {
   sequelize,
   modelName: 'User',
   tableName: 'employees',
+  timestamps: true,
+  underscored: true
 });
 
 // User.hasOne(Address);

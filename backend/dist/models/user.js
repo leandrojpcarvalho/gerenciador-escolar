@@ -36,7 +36,6 @@ User.init({
     email: {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false,
-        unique: true,
     },
     password: {
         type: sequelize_1.DataTypes.STRING,
@@ -44,14 +43,22 @@ User.init({
     },
     addressId: {
         type: sequelize_1.DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
     },
-    createdAt: sequelize_1.DataTypes.DATE,
-    updatedAt: sequelize_1.DataTypes.DATE
+    createdAt: {
+        allowNull: false,
+        type: sequelize_1.DataTypes.DATE,
+    },
+    updatedAt: {
+        allowNull: false,
+        type: sequelize_1.DataTypes.DATE,
+    }
 }, {
     sequelize: _1.default,
     modelName: 'User',
     tableName: 'employees',
+    timestamps: true,
+    underscored: true
 });
 // User.hasOne(Address);
 exports.default = User;

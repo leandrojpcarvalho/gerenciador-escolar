@@ -42,8 +42,12 @@ Student.init(
     motherName: {
       type: DataTypes.STRING,
       allowNull: false,
+      field: 'mother_name'
     },
-    fatherName: DataTypes.STRING,
+    fatherName: {
+      type: DataTypes.STRING,
+      field: 'father_name'
+    },
     birthday: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -56,17 +60,28 @@ Student.init(
     addressId: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      field: 'address_id'
     },
     houseNumber: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      field: 'house_number'
     },
-    createdAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE,
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+      field: 'created_at'
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+      field: 'updated_at'
+    }
   },
   {
     sequelize,
     modelName: 'students',
+    timestamps: true,
   }
 );
 

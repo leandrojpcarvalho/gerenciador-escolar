@@ -4,6 +4,7 @@
   "description": "app to manager a school",
   "main": "server.ts",
   "scripts": {
+    "reset:db": "tsc && cd src && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate",
     "test": "test",
     "build": "npm tsc",
     "dev": "nodemon --exec \"ts-node src/server.ts\"",

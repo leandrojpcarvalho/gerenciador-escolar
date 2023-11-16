@@ -36,47 +36,14 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var sequelize_1 = require("sequelize");
 exports.default = {
     up: function (queryInterface) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, queryInterface.createTable('employees', {
-                            id: {
-                                allowNull: false,
-                                autoIncrement: true,
-                                primaryKey: true,
-                                type: sequelize_1.DataTypes.INTEGER
-                            },
-                            email: {
-                                allowNull: false,
-                                type: sequelize_1.DataTypes.STRING
-                            },
-                            password: {
-                                allowNull: false,
-                                type: sequelize_1.DataTypes.STRING
-                            },
-                            addressId: {
-                                type: sequelize_1.DataTypes.INTEGER,
-                                field: 'address_id',
-                                unique: true,
-                                references: {
-                                    model: 'addresses',
-                                    key: 'id'
-                                }
-                            },
-                            createdAt: {
-                                allowNull: false,
-                                type: sequelize_1.DataTypes.DATE,
-                                field: 'created_at'
-                            },
-                            updatedAt: {
-                                allowNull: false,
-                                type: sequelize_1.DataTypes.DATE,
-                                field: 'updated_at'
-                            },
-                        })];
+                    case 0: return [4 /*yield*/, queryInterface.bulkInsert('addresses', [{
+                                address: 'Street some street'
+                            }], {})];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];
@@ -88,7 +55,7 @@ exports.default = {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, queryInterface.dropTable('employees')];
+                    case 0: return [4 /*yield*/, queryInterface.bulkInsert('employees', [], {})];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];

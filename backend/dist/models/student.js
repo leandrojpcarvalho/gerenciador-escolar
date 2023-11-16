@@ -40,8 +40,12 @@ Student.init({
     motherName: {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false,
+        field: 'mother_name'
     },
-    fatherName: sequelize_1.DataTypes.STRING,
+    fatherName: {
+        type: sequelize_1.DataTypes.STRING,
+        field: 'father_name'
+    },
     birthday: {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false,
@@ -54,16 +58,27 @@ Student.init({
     addressId: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
+        field: 'address_id'
     },
     houseNumber: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
+        field: 'house_number'
     },
-    createdAt: sequelize_1.DataTypes.DATE,
-    updatedAt: sequelize_1.DataTypes.DATE,
+    createdAt: {
+        allowNull: false,
+        type: sequelize_1.DataTypes.DATE,
+        field: 'created_at'
+    },
+    updatedAt: {
+        allowNull: false,
+        type: sequelize_1.DataTypes.DATE,
+        field: 'updated_at'
+    }
 }, {
     sequelize: _1.default,
     modelName: 'students',
+    timestamps: true,
 });
 // Student.hasOne(Address);
 exports.default = Student;

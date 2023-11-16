@@ -21,18 +21,21 @@ export default{
       addressId: { 
         type: DataTypes.INTEGER,
         field: 'address_id',
+        unique: true,
         references: {
           model: 'addresses',
           key: 'id'
         }
       },
       createdAt: {
+        allowNull: false,
         type: DataTypes.DATE,
         field: 'created_at'
       },
       updatedAt:  {
+        allowNull: false,
         type: DataTypes.DATE,
-        field: 'update_at'
+        field: 'updated_at'
       },
     });
   },
