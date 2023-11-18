@@ -1,7 +1,7 @@
-import * as login from './login';
+import UserController from "./user";
 
 const Controllers = {
-  login,
+  UserController,
 }
 
 export default Controllers;

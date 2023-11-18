@@ -1,18 +1,15 @@
+import exp from 'constants';
 import { Request, Response, NextFunction } from 'express';
 
 export interface Middlewares {
   (req: Request, res: Response, next: NextFunction) : Promise<Response | undefined>;
 }
 
-export interface Controller {
-  (req: Request, res: Response) : (Promise<Response>);
-}
-
 export interface Service<T,R> {
   (param:T) : Promise<ServiceResponse<R>>
 }
 
-interface ServiceResponse<T> {
+export interface ServiceResponse<T> {
   status: number;
   payload: T;
 }

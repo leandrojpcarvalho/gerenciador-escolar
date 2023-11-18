@@ -8,7 +8,6 @@
       "name": "Depurar local",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "envFile": "${workspaceFolder}/.env",
       "program": "${workspaceFolder}/src/server.ts",
       "request": "launch",
       "restart": true,

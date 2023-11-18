@@ -1,7 +1,7 @@
-import * as login from './login';
+import UserService from "./user";
 
-const Service = {
-  login,
+const Services = {
+  UserService,
 }
 
-export default Service;
+export default Services;

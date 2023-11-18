@@ -1,4 +1,7 @@
-import { Sequelize } from 'sequelize';
-import * as config from '../config/database';
+import UserModel from "./user";
 
-export default new Sequelize(config);
+const Models = {
+  UserModel,
+}
+
+export default Models;
