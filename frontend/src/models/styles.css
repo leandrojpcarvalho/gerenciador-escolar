@@ -1,0 +1,21 @@
+.login-area{
+  flex-grow: 1;
+  display: flex;
+  box-shadow: 5px 5px 60px gray; 
+  &>div{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-height: 638px;
+  }
+  &>div:nth-child(2){
+    max-width: 50%;
+    >img{
+      max-width: 500px;;
+    }
+  }
+  &>div:nth-child(1){
+    background-color:#00b1fb;
+    flex-grow: 1;
+  }
+}
