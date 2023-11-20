@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { validationLogin } from '../validations';
 import { Actions } from '../redux/actions';
-import { store } from '../store';
+import { RootState, store } from '../store';
+import { Login } from '../types';
+import { useSelector } from 'react-redux';
 
 const userInfo = {
   email: '',
@@ -11,18 +13,21 @@ const userInfo = {
 
 function Login() {
   const [formInfo, setFormInfo] = useState(userInfo);
-  const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  // const [isLoading, setIsLoading] = useState(false);
-  // const dispatch = useDispatch();
+
+  const { statusByName } = useSelector((state: RootState)=> state.auth);
+  useEffect(() => {
+
+  }, [statusByName]);
 
   useEffect(()=> {
-    if (error === ''){
-      setIsError(false);
-    } else {
-      setIsError(true);
-    }
+    if (error === 'no errors'){
+      login(formInfo);
+    } 
   },[error]);
+
+  const login = async(body: Login) => await store.dispatch(Actions.login({body, method: 'POST'}));
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const key = event.target.name;
@@ -31,13 +36,11 @@ function Login() {
     const newObj = {...formInfo, [key]: value};
     setFormInfo(newObj);
   };
+  
 
   const handleClick = async (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault();
     validationLogin(formInfo, setError);
-    setIsError(false);
-    const test = await store.dispatch(Actions.login({body:formInfo, method: 'POST'}));
-    console.log(test);
   };
 
   return(
@@ -51,7 +54,7 @@ function Login() {
             <label htmlFor="password">Password</label>
             <input type="password" name="password" onChange={handleChange}/>
             {
-              isError ? <p>{error}</p> : ''
+              error!=='no errors' ? <p>{error}</p> : ''
             }
           </div>
           <div>

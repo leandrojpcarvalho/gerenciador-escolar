@@ -12,6 +12,7 @@ export const validationLogin = async(
 ) => {
   try {
     await loginSchema.validateAsync(obj);
+    setState('no errors');
   } catch (err) {
     const error = err as Error;
     setState(error.message);
