@@ -1,0 +1,15 @@
+import { useDispatch, useSelector } from "react-redux"
+import { Login } from "./types"
+import { RootState } from "./store";
+import { statusByName } from "./redux/reducers";
+import { useEffect } from "react";
+import { Actions } from "./redux/actions";
+
+
+export const useLogin = (userLogin: Login) => {
+  const dispatch = useDispatch();
+
+  useEffect(()=> {
+    dispatch(Actions.login({body: userLogin, method: 'POST'}));
+  })
+}

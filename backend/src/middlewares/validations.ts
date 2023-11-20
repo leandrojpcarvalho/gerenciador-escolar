@@ -9,6 +9,7 @@ export const loginValidation: Middlewares = async (req, res, next) => {
     await schemas.loginSchema.validateAsync(body);
     next();
   }catch (error: any) {
+    console.log(error.message);
     return res.status(400).json(error.message)
   }
 }

@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import routes from './routes';
 
@@ -7,6 +8,9 @@ class App {
   constructor(){
     this.app = express();
 
+    this.app.use(cors({
+      origin: '*'
+    }));
     this.app.use(express.json());
 
     this.routes();
@@ -23,7 +27,6 @@ class App {
       console.log('rodando na porta:', port)
     });
   }
-
 }
 
 export default App;

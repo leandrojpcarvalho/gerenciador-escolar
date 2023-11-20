@@ -4,7 +4,7 @@ import './styles.css';
 
 function Index() {
   const [isLogged, setIsLogged] = useState(false);
-  return <body className='container'>{isLogged ? <></>: <ModelLogin />}</body>;
+  return <div className='container'>{isLogged ? <></>: <ModelLogin />}</div>;
 }
 
 export default Index;
