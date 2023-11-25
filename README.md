@@ -37,8 +37,6 @@ Instale o Docker e o Docker Compose. [Link para instalação do Docker Compose](
 
 Execute o seguinte comando para iniciar a aplicação:
 ```ruby
-bash
-Copy code
 docker-compose up -d
 ```
 
@@ -51,13 +49,12 @@ Clone o repositório.
 
 Execute o seguinte comando para instalar as dependências:
 ```ruby
-bash
-Copy code
 npm install
+```
+
 Execute o seguinte comando para iniciar a aplicação em modo de desenvolvimento:
 
-bash
-Copy code
+```ruby
 npm run dev
 ```
 O frontend estará disponível em [localhost:3001](http://localhost:3001), e o backend em [localhost:3000](http://localhost:3000).
