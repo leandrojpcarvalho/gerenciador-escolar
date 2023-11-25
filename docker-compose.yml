@@ -9,7 +9,10 @@ services:
     command: run dev 
     tty: true
     environment:
-      - VITE_BACK_URL=localhost:3333
+      - VITE_BASE_URL=http://localhost:3333
+      - VITE_SECRET=algumacoisa.com
+    depends_on:
+      - backend
   backend:
     build: backend
     container_name: school_manager_back

@@ -16,9 +16,14 @@ function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const { statusByName } = useSelector((state: RootState)=> state.auth);
+  const { statusByName, error: errors } = useSelector((state: RootState)=> state.auth);
   useEffect(() => {
-
+    if(statusByName[formInfo.email] === 'pending') {
+      setIsLoading(true);
+    } else {
+      setError(errors[formInfo.email]?.message || '');
+      setIsLoading(false);
+    }
   }, [statusByName]);
 
   useEffect(()=> {
@@ -45,6 +50,7 @@ function Login() {
 
   return(
     <div>
+      {isLoading ? <h1>Carregando...</h1>: ''}
       <h2>Bem vindo!</h2>
       <section className="login-form">
         <form >
@@ -54,7 +60,7 @@ function Login() {
             <label htmlFor="password">Password</label>
             <input type="password" name="password" onChange={handleChange}/>
             {
-              error!=='no errors' ? <p>{error}</p> : ''
+              error!=='no errors' ? <p>{error}</p>: ''
             }
           </div>
           <div>

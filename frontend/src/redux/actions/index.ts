@@ -1,4 +1,4 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createAction } from '@reduxjs/toolkit';
 import Fetch from '../../fetch';
 import { Login, Request } from '../../types';
 
@@ -14,7 +14,6 @@ const login = createAsyncThunk(
   async (obj: Request<Login>,{ rejectWithValue }) => {
     try {
       const req = Fetch.requestMaker(obj);
-      console.log(req);
       const response = await fetch(`${path}/login`, req);
       const data = await response.json();
       return data;
@@ -26,7 +25,10 @@ const login = createAsyncThunk(
   },
 );
 
+const newAction = createAction('count');
+
 
 export const Actions = {
   login,
+  newAction,
 };

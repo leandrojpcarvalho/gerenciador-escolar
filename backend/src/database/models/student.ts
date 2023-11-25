@@ -85,6 +85,6 @@ Student.init(
   }
 );
 
-// Student.hasOne(Address);
+Student.hasOne(Address, { foreignKey: 'addressId', onDelete: 'CASCADE', onUpdate: 'CASCADE'});
 
 export default Student;
