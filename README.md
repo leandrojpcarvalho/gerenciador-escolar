@@ -1,7 +1,15 @@
 
 # Gerenciador Escolar
-## Descrição
-Este projeto é uma aplicação Node.js desenvolvida em TypeScript, utilizando o framework Express e o ORM Sequelize. Gerencia informações de usuários, estudantes e endereços, oferecendo rotas para autenticação de usuários e interações com o banco de dados. O projeto visa fornecer uma estrutura escalável e modular para aplicações web, com suporte a autenticação de usuários e gerenciamento de dados relacionais. Colaborador: Vinicus Tibo.
+
+## Descrição 
+<details>
+<summary>backend</summary>
+Este projeto é uma aplicação Node.js desenvolvida em TypeScript, utilizando o framework Express e o ORM Sequelize. Gerencia informações de usuários, estudantes e endereços, oferecendo rotas para autenticação de usuários e interações com o banco de dados. O projeto visa fornecer uma estrutura escalável e modular para aplicações web, com suporte a autenticação de usuários e gerenciamento de dados relacionais.
+</details>
+<details>
+<summary>frontend</summary>
+
+</details>
 
 ## Bibliotecas Utilizadas
 Express: Um framework minimalista e flexível de aplicação web Node.js que oferece um conjunto robusto de recursos.
