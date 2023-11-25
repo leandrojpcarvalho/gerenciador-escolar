@@ -45,6 +45,23 @@ Certifique-se de definir essas variáveis de ambiente antes de executar a aplica
 <details>
 <summary>frontend</summary>
 
+Este projeto frontend do Gerenciador Escolar é desenvolvido em React.js e TypeScript. Ele faz parte de um sistema que gerencia informações de usuários, estudantes e endereços, proporcionando rotas para autenticação de usuários e interações com o backend, construído com Node.js, Express e Sequelize.
+
+## Bibliotecas Utilizadas
+
+Este projeto frontend do Gerenciador Escolar utiliza as seguintes bibliotecas:
+
+* React.js: Uma biblioteca JavaScript para a construção de interfaces de usuário.
+* TypeScript: Um superset do JavaScript que adiciona tipos estáticos à linguagem.
+* Redux: Uma biblioteca de gerenciamento de estado que auxilia no controle do estado da aplicação.
+* React-Redux: Facilita a integração do Redux com o React.
+* axios: Uma biblioteca para fazer requisições HTTP.
+* react-router-dom: Facilita a navegação entre diferentes componentes React.
+* @reduxjs/toolkit: Fornece funcionalidades adicionais e simplifica o uso do Redux.
+* redux-thunk: Middleware para lidar com ações assíncronas no Redux.
+* @testing-library/react: Biblioteca de testes para componentes React.
+
+
  ## Estrutura do Projeto
 
 * src: Contém a lógica principal da aplicação.
