@@ -1,6 +1,8 @@
 
 # Gerenciador Escolar
 
+<details>
+<summary>Conheça o projeto</summary>
 ## Descrição 
 <details>
 <summary>backend</summary>
@@ -76,8 +78,10 @@ Este projeto frontend do Gerenciador Escolar utiliza as seguintes bibliotecas:
 
 ## Executando Testes
  em construção
+</details>
 
 ## Como Executar
+<details>
 Este projeto pode ser executado de duas maneiras:
 
 ### Docker
@@ -108,8 +112,28 @@ Execute o seguinte comando para iniciar a aplicação em modo de desenvolvimento
 npm run dev
 ```
 O frontend estará disponível em [localhost:3001](http://localhost:3001), e o backend em [localhost:3000](http://localhost:3000).
-
-
+</details>
 
 ## Contribuições
 [Vinicius Tibo](https://github.com/vinTibo)
+
+
+## Desenvolvimento 
+<details>
+
+### Para Implementar
+  #### Backend
+  - [ ] Refresh token
+  - [ ] Refatoração das classes student e employee
+  - [ ] testes unitários
+  - [ ] teste de integração
+  #### Frontend
+  - [ ] ambiente principal de interação de usuário.
+  - [ ] ambiente de atualização de dados de novos usuários.
+  - [ ] responsividade tela de login.
+  - [ ] testes unitários
+  - [ ] teste de integração
+### Implementado
+  - [x] tela de login
+  - [x] rota user
+</details>
