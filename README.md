@@ -36,11 +36,13 @@ Para executar este projeto usando Docker, siga os passos abaixo:
 Instale o Docker e o Docker Compose. [Link para instalação do Docker Compose](https://docs.docker.com/compose/install/)
 
 Execute o seguinte comando para iniciar a aplicação:
-
+```ruby
 bash
 Copy code
 docker-compose up -d
-O frontend estará disponível em localhost:3001, e o backend em localhost:3000.
+```
+
+O frontend estará disponível em [localhost:3001](http://localhost:3001), e o backend em [localhost:3000](http://localhost:3000).
 
 ### Localmente
 Se preferir executar localmente, siga os passos abaixo:
@@ -48,7 +50,7 @@ Se preferir executar localmente, siga os passos abaixo:
 Clone o repositório.
 
 Execute o seguinte comando para instalar as dependências:
-
+```ruby
 bash
 Copy code
 npm install
@@ -57,9 +59,10 @@ Execute o seguinte comando para iniciar a aplicação em modo de desenvolvimento
 bash
 Copy code
 npm run dev
-O frontend estará disponível em localhost:3001, e o backend em localhost:3000.
+```
+O frontend estará disponível em [localhost:3001](http://localhost:3001), e o backend em [localhost:3000](http://localhost:3000).
 
-Banco de Dados
+## Banco de Dados
 O projeto utiliza o Sequelize como ORM e suporta as seguintes entidades:
 
 User: Representa informações do usuário.
@@ -68,12 +71,9 @@ Address: Representa informações de endereço.
 Executando Testes
 [Se você tiver testes, forneça instruções sobre como executá-los.]
 
-Variáveis de Ambiente
+## Variáveis de Ambiente
 SECRET_TOKEN: Chave secreta para a geração de tokens JWT.
 Certifique-se de definir essas variáveis de ambiente antes de executar a aplicação.
 
-Contribuições
-[Inclua diretrizes para contribuir para o seu projeto, se aplicável.]
-
-Licença
-[Especifique a licença sob a qual o projeto é distribuído.]
+## Contribuições
+[Vinicius Tibo](https://github.com/vinTibo)
