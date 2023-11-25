@@ -7,6 +7,7 @@
     "reset:db": "tsc && cd src && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "test": "test",
     "build": "npm tsc",
+    "predev": "npm run reset:db", 
     "dev": "ts-node-dev src/server.ts",
     "start": "node ./dist/server.js"
   },
