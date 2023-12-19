@@ -6,7 +6,7 @@ import './styles.css';
 function ModelLogin() {
   // const dispatch = useDispatch();
   return (
-    <div>
+    <div className="container">
       <div className="login-area">
         <div className="login">
           <Login />

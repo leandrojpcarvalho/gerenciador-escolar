@@ -14,4 +14,20 @@ export type Request<T> = {
   },
 }
 
+export type Phone = {
+  id?: number;
+  phoneNumber: string;
+  phoneOwner: string;
+};
+
+
+export type StudentType = {
+  id: number,
+  name: string,
+  period: string,
+  grade: number,
+  letter: string,
+  counselor: string,
+}
+
 export type RequestGenerator = <T>(param:Request<T>) => RequestInit;

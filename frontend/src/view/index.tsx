@@ -4,6 +4,14 @@ import './styles.css';
 import { useSelector } from 'react-redux';
 import {RootState} from '../store';
 import Header from '../components/header';
+import AddressAndContactForm from '../components/userForm/addressAndContactForm';
+import Modal from '../components/modal';
+import UserInfoForm from '../components/userForm/userInfoForm';
+
+const obj = {
+  info : UserInfoForm,
+  address : AddressAndContactForm, 
+};
 
 
 function Index() {
@@ -15,7 +23,9 @@ function Index() {
       setIsLogged(true);
     }
   }, [token]);
-  return <div className='container'>{isLogged ? <Header/>: <ModelLogin />}</div>;
+  // return isLogged ? 
+  return <Modal modalContent={obj} ModalHeader={ { title: '', subTitle: ''} } />
+  // : <ModelLogin />;
 }
 
 export default Index;

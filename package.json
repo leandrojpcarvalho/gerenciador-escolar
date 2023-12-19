@@ -1,0 +1,12 @@
+{
+  "name": "gerenciador-escolar",
+  "version": "1.0.0",
+  "description": "<details> <summary>Conheça o projeto</summary>",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "cd frontend && npm run dev && cd ../backend npm run dev"
+  },
+  "author": "Leandro Carvalho",
+  "license": "ISC"
+}

@@ -1,0 +1,18 @@
+.students-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header-students {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.student-details {
+  display: grid;
+  text-transform: uppercase;
+  grid-template-columns: repeat(5,1fr);
+}
