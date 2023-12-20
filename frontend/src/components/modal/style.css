@@ -19,10 +19,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ;
   margin: 0 10%;
   height: 50%;
   padding: 20px 30px;
+}
+
+.form {
+  box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.418);
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .header {
@@ -42,3 +47,43 @@
   }
 }
 
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: capitalize;
+  background-color: var(--gray-border);
+  padding: 5px 0;
+  margin: 10px 0;
+  border-radius: 10px 0 ;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+input, select, option {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+input {
+  text-transform: lowercase;
+}
+
+form {
+  display: grid;
+  grid-auto-rows: auto;
+  padding: 20px;
+  gap: 20px;
+}
